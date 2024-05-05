@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "314471718804",
+    "project_id": "saan-jo",
+    "storage_bucket": "saan-jo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314471718804:android:0adec102e0e1e2ddc0b981",
+        "android_client_info": {
+          "package_name": "com.example.sanjologin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314471718804-l1v35hq63irm92ktrp1gjq4cgse2gbl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj4IpJp_tQ1RX7WZBJZPBW-CWxvExnRO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314471718804-l1v35hq63irm92ktrp1gjq4cgse2gbl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
