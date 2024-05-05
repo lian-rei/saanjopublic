@@ -69,7 +69,7 @@ class _MapPageState extends State<MapPage> {
           return FlutterMap(
             options: MapOptions(
               initialCenter: LatLng(position.latitude, position.longitude),
-              initialZoom: .2,
+              initialZoom: 20.2,
             ),
             children: [
               TileLayer(
@@ -85,7 +85,7 @@ class _MapPageState extends State<MapPage> {
                 style: LocationMarkerStyle(
                   marker: const DefaultLocationMarker(
                     child: Icon(
-                      Icons.navigation,
+                      Icons.ac_unit_rounded,
                       color: Colors.blue,
                     ),
                   ),
@@ -96,22 +96,23 @@ class _MapPageState extends State<MapPage> {
                 latitude: terminals[1].latitude,
                 longitude: terminals[1].longitude,
                 accuracy: 5
-                ),
-                style: LocationMarkerStyle(
+                ), style: LocationMarkerStyle(
+                  markerSize: Size(5,5),
+                  showHeadingSector: false,
+                  showAccuracyCircle: false,
                   marker: const DefaultLocationMarker(
+                    color: Colors.transparent,
                     child: Icon(
-                      Icons.navigation,
-                      color: Colors.blue,
-                    ),
-                  ),
-                  markerSize: const Size(20,20)
-                ),
-                ),
+                      Icons.ac_unit_rounded,
+                      color: Colors.black26
+                    )
+                  )
+                )  ),
               CurrentLocationLayer(
                 alignPositionOnUpdate: AlignOnUpdate.always,
                 alignDirectionOnUpdate: AlignOnUpdate.always,
                 style: LocationMarkerStyle(
-                  marker: const DefaultLocationMarker(
+                  marker: DefaultLocationMarker(
                     child: Icon(
                       Icons.navigation,
                       color: Colors.white,
