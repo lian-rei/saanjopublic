@@ -23,3 +23,4 @@ Future<Position> _determinePosition() async {
   }
   return Future.error('Unable to determine position.');
 }
+
