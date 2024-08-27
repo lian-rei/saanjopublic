@@ -1,20 +1,6 @@
+// widgets/login_form.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
-      body: const LoginForm(),
-    );
-  }
-}
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -59,6 +45,11 @@ class _LoginFormState extends State<LoginForm> {
             },
             child: const Text('Don\'t have an account? Register here.'),
           ),
+          const SizedBox(height: 16.0),
+          TextButton(
+            onPressed: _continueAsGuest,
+            child: const Text('Continue as Guest'),
+          ),
         ],
       ),
     );
@@ -87,5 +78,9 @@ class _LoginFormState extends State<LoginForm> {
         _isLoading = false;
       });
     }
+  }
+
+  void _continueAsGuest() {
+    Navigator.pushNamed(context, '/map_page');
   }
 }
